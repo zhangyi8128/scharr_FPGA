@@ -3,8 +3,8 @@
 #include <stdint.h>
 #include "ap_int.h"
 
-#ifndef SOBEL_H_
-#define SOBEL_H_
+#ifndef SCHARR_H_
+#define SCHARR_H_
 
 #define WIDTH 	1280
 #define HEIGHT	720
