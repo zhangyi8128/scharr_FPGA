@@ -54,15 +54,15 @@ static PIXEL Gradient_Y(PIXEL WB[3][3])
 
 static PIXEL scharr3x3_kernel(PIXEL WB[3][3])
 {
-	PIXEL g_x, g_y, sobel;
+	PIXEL g_x, g_y, scharr;
 	short temp;
 	g_x = Gradient_X(WB);
 	g_y = Gradient_Y(WB);
 	temp = g_x + g_y;
-	if(temp > 255) sobel = 255;
-	else sobel = temp;
+	if(temp > 255) scharr = 255;
+	else scharr = temp;
 
-	return sobel;
+	return scharr;
 }
 
 void scharr(hls::stream<trans_pkt>& src, hls::stream<trans_pkt>& dst, int rows, int cols)
